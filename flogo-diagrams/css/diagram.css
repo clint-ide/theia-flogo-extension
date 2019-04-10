@@ -1,0 +1,165 @@
+.sprotty-node {
+    fill: lightblue
+}
+
+.sprotty-node.selected {
+    stroke-width: 2;
+    stroke: #0070be;
+}
+
+.sprotty-label {
+    fill: black;
+    stroke-width: 0;
+}
+.sprotty-label
+.sprotty-button {
+    fill: #B4B4B488;
+}
+
+.sprotty-edge .sprotty-label {
+    fill: var(--theia-ui-font-color0);
+}
+
+.sprotty-edge {
+    fill:none;
+    stroke:#B4B4B4;
+    stroke-width: 2px;
+}
+
+.sprotty-edge-arrow {
+    fill:#B4B4B4;
+}
+
+.sprotty-edge > .sprotty-routing-handle {
+    r: 5px;
+    fill: #888;
+    stroke: none;
+    z-index: 1000;
+}
+
+.sprotty-edge > .sprotty-routing-handle[data-kind='line'] {
+    opacity: 0.35;
+}
+
+.sprotty-edge > .sprotty-routing-handle.selected {
+    fill: #0070be;
+}
+
+.sprotty-edge > .sprotty-routing-handle.mouseover {
+    stroke: #0191f8;
+    stroke-width: 1;
+}
+
+.sprotty-edge.mouseover:not(.selected) {
+    stroke-width: 3px;
+}
+
+.sprotty-hidden {
+    font-size: var(--theia-ui-font-size1);
+    width: 0px;
+    height: 0px;
+}
+
+/* triggers nodes */
+.sprotty-triggers rect {
+    fill: antiquewhite;
+    stroke: darkgray;
+}
+
+.sprotty-triggers.selected rect {
+    stroke-width: 2;
+}
+
+/* trigger nodes */
+.sprotty-trigger rect {
+    fill: azure;
+}
+
+.sprotty-trigger.selected rect {
+    stroke-width: 2;
+    stroke: cadetblue;
+}
+
+/* action port */
+.sprotty-action rect {
+    fill: darkcyan;
+    height: 2px;
+    width: 2px;
+}
+
+.sprotty-action.selected rect {
+    stroke-width: 2;
+    stroke: cadetblue;
+}
+
+/* flows nodes */
+.sprotty-flows rect {
+    fill: antiquewhite;
+    stroke: darkgray;
+}
+
+.sprotty-flows.selected rect {
+    stroke-width: 2;
+}
+
+/* flow nodes */
+.sprotty-flow rect {
+    fill: floralwhite;
+    stroke: darkgray;
+}
+
+.sprotty-flow.selected rect {
+    stroke-width: 2;
+    stroke: cadetblue;
+}
+
+/* flowinput port */
+.sprotty-flowinput rect {
+    fill: darkcyan;
+    height: 2px;
+    width: 2px;
+}
+
+.sprotty-flowinput.selected rect {
+    stroke-width: 2;
+    stroke: cadetblue;
+}
+
+/* task nodes */
+.sprotty-task rect {
+    fill: azure;
+    stroke: darkgray;
+}
+
+.sprotty-task.selected rect {
+    stroke-width: 2;
+    stroke: cadetblue;
+}
+
+/* task input port */
+.sprotty-taskinput rect {
+    fill: darkcyan;
+    height: 2px;
+    width: 2px;
+}
+
+.sprotty-taskinput.selected rect {
+    stroke-width: 2;
+    stroke: cadetblue;
+}
+
+/* task output port */
+.sprotty-taskoutput rect {
+    fill: darkcyan;
+    height: 2px;
+    width: 2px;
+}
+
+.sprotty-taskoutput.selected rect {
+    stroke-width: 2;
+    stroke: cadetblue;
+}
+
+svg {
+    height: 100%;
+}

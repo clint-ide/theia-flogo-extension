@@ -1,0 +1,39 @@
+{
+  "name": "@clint-ide/flogo-language",
+  "keywords": [
+    "theia-extension"
+  ],
+  "version": "0.0.0",
+  "files": [
+    "lib",
+    "src",
+    "build"
+  ],
+  "dependencies": {
+    "@theia/core": "1.0.0",
+    "@theia/monaco": "1.0.0",
+    "@theia/json": "1.0.0",
+    "sprotty": "0.8.0",
+    "sprotty-theia": "0.8.0",
+    "@clint-ide/flogo-diagrams": "0.0.0"
+  },
+  "devDependencies": {
+    "rimraf": "latest",
+    "typescript": "latest"
+  },
+  "scripts": {
+    "install:languageserver": "rimraf -rf ./build && mkdir build && yarn copy:languageserver && yarn unzip:languageserver",
+    "copy:languageserver": "cp ../../lsp/io.flogo.lsp.ide/build/distributions/flogo-language-server.zip . 2>/dev/null || curl -o flogo-language-server.zip -fsSL https://github.com/clint-ide/clint-ide/releases/download/v0.0.1/flogo-language-server.zip",
+    "unzip:languageserver": "unzip ./flogo-language-server.zip -d build/",
+    "prepare": "yarn run clean && yarn install:languageserver && yarn run build",
+    "clean": "rimraf lib",
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "theiaExtensions": [
+    {
+      "frontend": "lib/browser/flogo-frontend-module",
+      "backend": "lib/node/flogo-backend-module"
+    }
+  ]
+}
